@@ -25,9 +25,9 @@ include 'includes/check-if-added.php';
         <div id="bg" class=" ">
             <div class="container" style="padding-top:150px">
             <div class="mx-auto p-5 text-white" id="banner_content" style="border-radius: 0.5rem;" >
-            <h1>We sell Happiness :)</h1>
-            <p>Flat 40% OFF on premium brands </p>
-            <a href="products.php" class="btn btn-warning btn-lg text-white">Shop Now</a>
+            <h1>讓舊物開始新的旅程</h1>
+            <p>任何你想像的到的東西都有</p>
+            <a href="products.php" class="btn btn-warning btn-lg text-white">馬上行動</a>
 
             </div>
             </div>
@@ -35,7 +35,7 @@ include 'includes/check-if-added.php';
         </div>
     </div>
     <div class="text-center pt-4 h3">
-        * Be fashionable Men *
+        熱門商品
     </div>
     <!--menu highlights start-->
  <div class="container pt-3">
@@ -44,7 +44,7 @@ include 'includes/check-if-added.php';
                 <a href="products.php#watch"> <img src="images/watch.jpg" class="img-fluid " alt="" style="border-radius:0.5rem">
                 <!-- https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fm=jpg&w=400&fit=max-->
                     <div class="h5 pt-3 font-weight-bolder">
-                      Watches
+                      手錶
                    </div>
                  </a>
              </div>
@@ -52,7 +52,7 @@ include 'includes/check-if-added.php';
                 <a href="products.php#shirt"  >
                   <img src="images/clothing.jpg" class="img-fluid zoom" alt="" style="border-radius:0.5rem" >
                      <div class="h5 pt-3 font-weight-bolder">
-                        Clothing
+                        衣服
                      </div>
                   </a>
              </div>
@@ -60,7 +60,7 @@ include 'includes/check-if-added.php';
                 <a href="products.php#shoes">
                  <img src="images/shoes.jpg" class="img-fluid   " alt="" style="border-radius:0.5rem">
                 <div class="h5 pt-3 font-weight-bolder">
-                    Shoes
+                    鞋子
                  </div>
              </a>
              </div>
@@ -68,7 +68,7 @@ include 'includes/check-if-added.php';
                 <a href="products.php#headphones">
                  <img src="images/headphones.jpg" class="img-fluid  " alt="" style="border-radius:0.5rem">
                  <div class="h5 pt-3 font-weight-bolder">
-                    Headphones
+                    耳機
                  </div>
               </div>
             </a>

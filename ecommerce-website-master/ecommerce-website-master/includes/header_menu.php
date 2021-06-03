@@ -3,23 +3,20 @@
 <!--Navigation bar start-->
 <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:rgba(0,0,0,0.5)">
             <div class="container">
-                    <a href="index.php" class="navbar-brand" style="font-family: 'Delius Swash Caps'">Planet Shopify</a>
+                    <a href="index.php" class="navbar-brand" style="font-family: 'Delius Swash Caps'">換換</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="nav navbar-nav">
-                       <li class="nav-item dropdown">
-                           <a href="" class="nav-link dropdown-toggle" id="navbar-drop" data-toggle="dropdown">
-                               市集
-                            </a>   
-                       </li>
+                       
+                       <li class="nav-item"><a href="products.php" class="nav-link">市集</a></li>     
                        <li class="nav-item"><a href="index.php" class="nav-link">Offers</a></li>
-                       <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
+                       <li class="nav-item"><a href="about.php" class="nav-link">關於我們</a></li>
                        <?php
                        if (isset($_SESSION['email'])) {
                         ?>
-                       <li class="nav-item"><a href="cart.php" class="nav-link">Cart</a></li>
+                       <li class="nav-item"><a href="cart.php" class="nav-link">關注物品</a></li>
                        <?php
                           } 
                     ?>
@@ -78,8 +75,8 @@
               <a href="http://">forgot password ?</a>
             </div>
             <div class="modal-footer">
-              <p class="mr-auto">New User? <a href="#signup" data-toggle="modal" data-dismiss="modal" >signup</a></p>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+              <p class="mr-auto">新換客? <a href="#signup" data-toggle="modal" data-dismiss="modal" >signup</a></p>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" >關閉</button>
             </div>
           </div>
         </div>
@@ -122,14 +119,14 @@
                 
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" required>
-                    <label for="checkbox" class="form-check-label">Agree terms and Condition</label>
+                    <label for="checkbox" class="form-check-label">同意以上條款內容</label>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block" name="Submit">Sign Up</button>
               </form>
             </div>
             <div class="modal-footer">
-              <p class="mr-auto">Already Registered?<a href="#login"  data-toggle="modal" data-dismiss="modal">Login</a></p>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+              <p class="mr-auto">已經有帳號?<a href="#login"  data-toggle="modal" data-dismiss="modal">Login</a></p>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" >關閉</button>
             </div>
           </div>
         </div>
