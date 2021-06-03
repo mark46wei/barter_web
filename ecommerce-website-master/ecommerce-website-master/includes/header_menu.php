@@ -11,15 +11,8 @@
                     <ul class="nav navbar-nav">
                        <li class="nav-item dropdown">
                            <a href="" class="nav-link dropdown-toggle" id="navbar-drop" data-toggle="dropdown">
-                               Products
-                            </a>
-                               <div class="dropdown-menu">
-                                   <a href="products.php#watch" class="dropdown-item">Watches</a>
-                                   <a href="products.php#shirt" class="dropdown-item">T-Shirts</a>
-                                   <a href="products.php#shoes" class="dropdown-item">Shoes</a>
-                                   <a href="products.php#headphones" class="dropdown-item">Headphones/Speakers</a>
-                               </div>
-                           
+                               市集
+                            </a>   
                        </li>
                        <li class="nav-item"><a href="index.php" class="nav-link">Offers</a></li>
                        <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
