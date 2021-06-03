@@ -24,15 +24,15 @@ include 'includes/check-if-added.php';
 <div class="container" style="margin-top:65px">
          <!--jumbutron start-->
         <div class="jumbotron text-center">
-            <h1>Welcome to Planet Shopify!</h1>
-            <p>We have wide range of products for you.No need to hunt around,we have all in one place</p>
+            <h1>歡迎來到以物易物網</h1>
+            <p>在這裡你能將你不需要的東西，換成你所需的物品</p>
         </div>
         <!--jumbutron ends-->
         <!--breadcrumb start-->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Products</li>
+                <li class="breadcrumb-item"><a href="index.php">主頁</a></li>
+                <li class="breadcrumb-item active" aria-current="page">產品</li>
             </ol>
         </nav>
         <!--breadcrumb end-->
@@ -88,7 +88,7 @@ include 'includes/check-if-added.php';
                 <img src="images/watch3.jpg" alt="" class="img-fluid pb-1">
                 <div class="figure-caption">
                     <h6>Panerai Watch</h6>
-                    <h6>Price :Rs 3500</h6>
+                    <h6>價錢 : 3500</h6>
                     <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -110,7 +110,7 @@ include 'includes/check-if-added.php';
                 <img src="images/watch4.jpg" alt="" class="img-fluid pb-1">
                 <div class="figure-caption">
                     <h6>Nonos Watch</h6>
-                    <h6>Price :Rs 1800</h6>
+                    <h6>價錢 : 1800</h6>
                     <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -134,7 +134,7 @@ include 'includes/check-if-added.php';
                     <img src="images/shirt1.jpg" alt="" class="img-fluid pb-1"  >
                     <div class="figure-caption">
                     <h6>Levis</h6>
-                    <h6>Price :Rs 1800</h6>
+                    <h6>價錢 : 1800</h6>
                     <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -156,7 +156,7 @@ include 'includes/check-if-added.php';
                     <img src="images/shirt2.jpg" alt="" class="img-fluid pb-1" >
                     <div class="figure-caption">
                     <h6>Louis Philippe t-shirt</h6>
-                    <h6>Price :Rs 2500</h6>
+                    <h6>價錢 : 2500</h6>
                     <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -178,7 +178,7 @@ include 'includes/check-if-added.php';
                     <img src="images/shirt3.jpg" alt="" class="img-fluid pb-1">
                     <div class="figure-caption">
                         <h6>Highlander t-shirt</h6>
-                        <h6>Price :Rs 500</h6>
+                        <h6>價錢 : 500</h6>
                         <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -200,7 +200,7 @@ include 'includes/check-if-added.php';
                     <img src="images/shirt4.jpg" alt="" class="img-fluid pb-1">
                     <div class="figure-caption">
                         <h6>GUCCI White t-Shirt</h6>
-                        <h6>Price :Rs 2300</h6>
+                        <h6>價錢 : 2300</h6>
                         <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -224,7 +224,7 @@ include 'includes/check-if-added.php';
                         <img src="images/shoe1.jpg" alt="" class="img-fluid pb-1">
                         <div class="figure-caption">
                             <h6>Nike White Sneaker</h6>
-                            <h6>Price :Rs 8000</h6>
+                            <h6>價錢 : 8000</h6>
                             <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -246,7 +246,7 @@ include 'includes/check-if-added.php';
                         <img src="images/shoe2.jpg" alt="" class="img-fluid pb-1">
                         <div class="figure-caption">
                             <h6>Nike White Shoes</h6>
-                            <h6>Price :Rs 7500</h6>
+                            <h6>價錢 : 7500</h6>
                             <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -268,7 +268,7 @@ include 'includes/check-if-added.php';
                         <img src="images/shoe3.jpg" alt="" class="img-fluid pb-1">
                         <div class="figure-caption">
                             <h6>Nike Yellow Sneaker</h6>
-                            <h6>Price :Rs 7000</h6>
+                            <h6>價錢 : 7000</h6>
                             <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -290,7 +290,7 @@ include 'includes/check-if-added.php';
                         <img src="images/shoe4.jpg" alt="" class="img-fluid pb-1">
                         <div class="figure-caption">
                         <h6>Nike Sneaker</h6>
-                    <h6>Price :Rs 6000</h6>
+                    <h6>價錢 : 6000</h6>
                     <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -314,7 +314,7 @@ include 'includes/check-if-added.php';
                             <img src="images/sp1.jpg" alt="" class="img-fluid pb-1">
                             <div class="figure-caption">
                                 <h6>Beats Headphone</h6>
-                                <h6>Price :Rs 22,500</h6>
+                                <h6>價錢 : 22,500</h6>
                                 <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -336,7 +336,7 @@ include 'includes/check-if-added.php';
                             <img src="images/sp2.jpg" alt="" class="img-fluid pb-1">
                             <div class="figure-caption">
                                 <h6>Zolo Headphone</h6>
-                                <h6>Price :Rs 4500</h6>
+                                <h6>價錢 : 4500</h6>
                                 <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -358,7 +358,7 @@ include 'includes/check-if-added.php';
                             <img src="images/sp3.jpg" alt="" class="img-fluid pb-1">
                             <div class="figure-caption">
                                 <h6>Sony Speaker</h6>
-                                <h6>Price :Rs 10,500</h6>
+                                <h6>價錢 : 10,500</h6>
                                 <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
@@ -380,7 +380,7 @@ include 'includes/check-if-added.php';
                             <img src="images/sp4.jpg" alt="" class="img-fluid pb-1">
                             <div class="figure-caption">
                                 <h6>Airpods</h6>
-                                <h6>Price :Rs 15,000</h6>
+                                <h6>價錢 : 15,000</h6>
                                 <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
                     <?php
