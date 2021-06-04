@@ -27,6 +27,7 @@
                     ?>
                     <ul class="nav navbar-nav ml-auto">
                        <li class="nav-item"><a href="logout_script.php" class="nav-link"><i class="fa fa-sign-out"></i>Logout</a></li>
+                       <li class="nav-item"><a href="upload.php" class="nav-link">上傳商品</a></li>
                        <li class="nav-item"><a  class="nav-link " data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="<?php echo $_SESSION['email'] ?>"><i class="fa fa-user-circle "></i></a></li>
                     </ul>
                     <?php
