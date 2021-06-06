@@ -126,6 +126,7 @@ red
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" required>
                     <label for="checkbox" class="form-check-label">同意以上條款內容</label>
+                    <input type="button" class="btn btn-secondary" value="用戶需知" onclick="location.href='read.php'">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block" name="Submit">Sign Up</button>
               </form>
