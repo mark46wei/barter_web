@@ -1,7 +1,12 @@
 
 
 <!--Navigation bar start-->
-<nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:rgba(0,0,0,0.5)">
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background:-webkit-linear-gradient(left,
+
+Orange ,
+
+red
+);,padding:10px;background-color:green;opacity:0.9;  ">
             <div class="container">
                     <a href="index.php" class="navbar-brand" style="font-family: 'Delius Swash Caps'">換換</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar">
