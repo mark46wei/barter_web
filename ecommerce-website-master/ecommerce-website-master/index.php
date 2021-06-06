@@ -35,7 +35,7 @@ include 'includes/check-if-added.php';
         </div>
     </div>
     <div class="text-center pt-4 h3">
-        熱門商品
+        推薦商品
     </div>
     <!--menu highlights start-->
  <div class="container pt-3">
