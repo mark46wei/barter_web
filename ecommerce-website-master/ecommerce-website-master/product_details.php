@@ -29,28 +29,58 @@ session_start();
 </head>
 <body>
 <!--header -->
- <?php
+
+<?php
 include 'includes/header_menu.php';
 include 'includes/check-if-added.php';
 ?>
 <div class="container" style="margin-top:100px">
     <div class="row">
-        <div class="col-sm-6">
-            <img src="images/watch1.jpg" alt="" class="img-fluid pb-1" >
-        </div>
-        <div class="col-sm-6">
-            <h2>商品名稱</h2>
-            <hr size="8px" align="center" width="100%">
-            <h5>欲交換商品</h5>
-            <hr size="8px" align="center" width="100%">
-            <p>商品描述</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div>
+<!-- database reader --> 
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ecommerce";
+
+$dsn = 'mysql:dbname=ecommerce;host=localhost';
+// create connect 
+$conn = new PDO($dsn, $username, $password);
+// Check connection
+
+$result =$conn->query('select * from my_img');
+
+foreach($result as  $row){
+    if($row["id"] == 0){
+        echo       '<div class="col-sm-6">';
+        echo           '<img src="img_display.php?id=<?php echo $row["id"]; ?>';
+        echo       '</div>';
+        echo       '<div class="col-sm-6">';
+        echo            "<h2>{$row["name"]}</h2>";
+        echo            '<hr size="8px" align="center" width="100%">';
+        echo            '<h5>欲交換商品</h5>';
+        echo            "{$row["change_name"]}";
+        echo           '<hr size="8px" align="center" width="100%">';
+        echo            '<p>商品描述</p>';
+        echo            "{$row["description"]}";
+        echo           '<hr size="8px" align="center" width="100%">';
+        echo            '<div>';         
+        echo        '</div>';
+        echo    '</div>';
+        echo'</div>';
+        }
+     }
+
+     // close connect 
+     $conn = null ;
+?>
+
+<!-- datareader end -->
+
+
+<br>
+        <div>
                 <div class="followButton">
                 <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">關注</a></p>
@@ -66,12 +96,13 @@ include 'includes/check-if-added.php';
                     }
                     ?>
                 </div>
-            </div>
         </div>
     </div>
 </div>
 
-      
+
+</div>
+
     <div>
         <div class="chat">
             <div class="container">
@@ -87,7 +118,7 @@ include 'includes/check-if-added.php';
         </div>
     </div>
 
-    
+
     <div class="container">
     <form action="chatDB.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
