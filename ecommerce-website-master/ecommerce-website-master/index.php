@@ -39,8 +39,8 @@ include 'includes/check-if-added.php';
     </div>
     <div class="container pt-3">
     
-            <div class="col-6 col-md-6 py-3">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" text-align="center">
             <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -48,7 +48,7 @@ include 'includes/check-if-added.php';
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="images/watch.jpg" class="d-block w-100" alt="...">
+      <img src="images/watch.jpg" class="d-block w-100" alt="..." >
     </div>
     <div class="carousel-item">
       <img src="images/clothing.jpg" class="d-block w-100" alt="...">
