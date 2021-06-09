@@ -29,14 +29,13 @@ session_start();
 </head>
 <body>
 <!--header -->
-
-<?php
+ <?php
 include 'includes/header_menu.php';
 include 'includes/check-if-added.php';
 ?>
 <div class="container" style="margin-top:100px">
     <div class="row">
-<!-- database reader --> 
+        <!-- database reader --> 
 <?php
 
 $servername = "localhost";
@@ -79,8 +78,6 @@ foreach($result as  $row){
 <!-- datareader end -->
 
 
-<br>
-        <div>
                 <div class="followButton">
                 <?php if (!isset($_SESSION['email'])) {?>
                     <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">關注</a></p>
@@ -96,13 +93,12 @@ foreach($result as  $row){
                     }
                     ?>
                 </div>
+            </div>
         </div>
     </div>
 </div>
 
-
-</div>
-
+      
     <div>
         <div class="chat">
             <div class="container">
@@ -118,14 +114,14 @@ foreach($result as  $row){
         </div>
     </div>
 
-
+    
     <div class="container">
     <form action="chatDB.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="comment">留言:</label>
-        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        <textarea type ="text" class="form-control" rows="5" id="comment" name="chatText"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">送出</button>
+      <input type="submit" name="submit" value="送出" class="btn btn-primary"></input>
     </form>
   </div>
 
