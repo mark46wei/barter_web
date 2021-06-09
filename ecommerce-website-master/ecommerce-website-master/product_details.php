@@ -110,7 +110,7 @@ $dsn = 'mysql:dbname=ecommerce;host=localhost';
 $conn = new PDO($dsn, $username, $password);
 // Check connection
 
-$result =$conn->query('select * from users JOIN chat');
+$result =$conn->query('select * from chat');
 
 foreach($result as  $row){      
         echo    '<div>';
