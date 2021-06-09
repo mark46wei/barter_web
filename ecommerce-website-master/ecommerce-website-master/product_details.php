@@ -22,8 +22,8 @@ session_start();
             padding:15vh 0 0 0; 
         }
         .chat{
-            margin-top:65px;
-            margin-bottom:65px; 
+            margin-top:5px;
+            margin-bottom:5px; 
         }
     </style>    
 </head>
@@ -98,23 +98,39 @@ foreach($result as  $row){
     </div>
 </div>
 
-      
-    <div>
-        <div class="chat">
-            <div class="container">
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td width="25%"><?php echo $_POST[""]; ?></td>
-                            <td width="75%"><?php echo $_POST["text"]; ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<?php
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ecommerce";
+
+$dsn = 'mysql:dbname=ecommerce;host=localhost';
+// create connect 
+$conn = new PDO($dsn, $username, $password);
+// Check connection
+
+$result =$conn->query('select * from users JOIN chat');
+
+foreach($result as  $row){      
+        echo    '<div>';
+        echo        '<div class="chat">';
+        echo            '<div class="container">';
+        echo                '<table class="table">';
+        echo                    '<tbody>';
+        echo                        '<tr>';
+        echo                            "<td width=25% hinght=20%>{$row["email_id"]}</td>";
+        echo                            "<td width=75% hinght=20%>{$row["chatText"]}</td>";
+        echo                        '</tr>';
+        echo                    '</tbody>';
+        echo                '</table>';
+        echo            '</div>';
+        echo        '</div>';
+        echo    '</div>';
     
+}
+$conn = null ;
+?>   
     <div class="container">
     <form action="chatDB.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
