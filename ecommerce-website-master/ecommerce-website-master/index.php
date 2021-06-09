@@ -37,13 +37,45 @@ include 'includes/check-if-added.php';
     <div class="text-center pt-4 h3">
         推薦商品
     </div>
+    <div class="container pt-3">
+    
+            <div class="col-6 col-md-6 py-3">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/watch.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/clothing.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/shoes.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
     <!--menu highlights start-->
- <div class="container pt-3">
+    <!--<div class="container pt-3">
         <div class="row text-center ">
             <div class="col-6 col-md-3 py-3">
-                <a href="products.php#watch"> <img src="images/watch.jpg" class="img-fluid " alt="" style="border-radius:0.5rem">
+                <a href="products.php#watch"> <img src="images/watch.jpg" class="img-fluid " alt="" style="border-radius:0.5rem">-->
                 <!-- https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fm=jpg&w=400&fit=max-->
-                    <div class="h5 pt-3 font-weight-bolder">
+                   <!-- <div class="h5 pt-3 font-weight-bolder">
                       手錶
                    </div>
                  </a>
@@ -73,8 +105,8 @@ include 'includes/check-if-added.php';
               </div>
             </a>
         </div>
-    </div>
-
+    </div> -->
+    
     <!--menu highlights end-->
     <!--footer -->
     <?php include 'includes/footer.php'?>
