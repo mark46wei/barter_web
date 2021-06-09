@@ -119,8 +119,8 @@ foreach($result as  $row){
         echo                '<table class="table">';
         echo                    '<tbody>';
         echo                        '<tr>';
-        echo                            "<td width=25% hinght=20%>{$row["email_id"]}</td>";
-        echo                            "<td width=75% hinght=20%>{$row["chatText"]}</td>";
+        echo                            "<td width:25%>{$_SESSION["email"]}</td>";
+        echo                            "<td width:75%>{$row["chatText"]}</td>";
         echo                        '</tr>';
         echo                    '</tbody>';
         echo                '</table>';
