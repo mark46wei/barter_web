@@ -3,8 +3,7 @@
 session_start();
 if (isset($_POST['submit'])) {
     $chatText=$_POST['chatText'];
-    $_SESSION['email']=$email_id;
-    $email_id=$_POST['email_id'];
+    $email_id=$_SESSION['email'];
     
     $dsn = 'mysql:dbname=ecommerce;host=localhost';
     $pdo = new PDO($dsn,'root','');
