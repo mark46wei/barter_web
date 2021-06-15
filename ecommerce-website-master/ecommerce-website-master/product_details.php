@@ -33,6 +33,7 @@ session_start();
 include 'includes/header_menu.php';
 include 'includes/check-if-added.php';
 ?>
+
 <div class="container" style="margin-top:100px">
     <div class="row">
         <!-- database reader --> 
@@ -51,21 +52,36 @@ $conn = new PDO($dsn, $username, $password);
 $result =$conn->query('select * from my_img');
 
 foreach($result as  $row){
-    if($row["id"] == 0){
+    
+    if($row["id"] == $_GET["id"]){
         echo       '<div class="col-sm-6">';
-        echo           '<img src="img_display.php?id=<?php echo $row["id"]; ?>';
+        echo           '<img src="img_display.php?id='.$row['id'].'">';
         echo       '</div>';
         echo       '<div class="col-sm-6">';
         echo            "<h2>{$row["name"]}</h2>";
         echo            '<hr size="8px" align="center" width="100%">';
         echo            '<h5>欲交換商品</h5>';
         echo            "{$row["change_name"]}";
-        echo           '<hr size="8px" align="center" width="100%">';
+        echo            '<hr size="8px" align="center" width="100%">';
         echo            '<p>商品描述</p>';
         echo            "{$row["description"]}";
-        echo           '<hr size="8px" align="center" width="100%">';
-        echo            '<div>';         
-        echo        '</div>';
+        echo            '<hr size="8px" align="center" width="100%">';
+
+        // ------------------ followButton -------------------------
+
+        echo        '<br>';
+        echo        '<div class="followButton">';
+                    if (!isset($_SESSION['email'])) {
+                        echo '<p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">關注</a></p>';
+                    } else {
+                    if (check_if_added_to_cart($row["id"])) {
+                         echo '<p><a href="#" class="btn btn-warning  text-white" disabled>關注</a></p>';
+                    } else {
+                        echo '<p><a href="cart-add.php?id='.$row['id'].'" name="add" value="add" class="btn btn-warning  text-white">關注</a><p>';
+                        
+                        }
+                    }
+        echo           '</div>';
         echo    '</div>';
         echo'</div>';
         }
@@ -73,30 +89,15 @@ foreach($result as  $row){
 
      // close connect 
      $conn = null ;
-?>
+     
+    
 
+?>
+        </div>        
+</div>
 <!-- datareader end -->
 
 
-                <div class="followButton">
-                <?php if (!isset($_SESSION['email'])) {?>
-                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">關注</a></p>
-                    <?php
-                    } else {
-                    if (check_if_added_to_cart(1)) {
-                     echo '<p><a href="#" class="btn btn-warning  text-white" disabled>關注</a></p>';
-                    } else {
-                        ?>
-                        <p><a href="cart-add.php?id=1" name="add" value="add" class="btn btn-warning  text-white">關注</a><p>
-                        <?php
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <?php
 
