@@ -61,17 +61,16 @@ include 'includes/check-if-added.php';
     echo            '<img src="img_display.php?id='.$row["id"].' alt="" class="img-fluid pb-1">';
     echo        '<div class="figure-caption">';
     echo            "<h6>{$row["name"]}</h6>";
-    echo            "<h6>{$row["id"]}</h6>";
     echo            "<h6>換取商品 :{$row["change_name"]}</h6>";
     echo            '<a href="product_details.php?id='.$row["id"].'" role="button" class="btn btn-secondary">瀏覽</a></p>';                 
     
     if (!isset($_SESSION['email'])) {
         echo '<p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">加入願望清單</a></p>';
         } else {
-            if (check_if_added_to_cart(3)) {
+            if (check_if_added_to_cart($row["id"])) {
             echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
             } else {
-            echo '<p><a href="cart-add.php?id=3" name="add" value="add" class="btn btn-warning  text-white">加入願望清單</a></p>';
+            echo '<p><a href="cart-add.php?id='.$row["id"].'" name="add" value="add" class="btn btn-warning  text-white">加入願望清單</a></p>';
            
         }
         }

@@ -77,8 +77,8 @@ foreach($result as  $row){
                     if (check_if_added_to_cart($row["id"])) {
                          echo '<p><a href="#" class="btn btn-warning  text-white" disabled>關注</a></p>';
                     } else {
-                        echo '<p><a href="cart-add.php?id='.$row['id'].'" name="add" value="add" class="btn btn-warning  text-white">關注</a><p>';
-                        
+                         echo '<p><a href="cart-add.php?id='.$row['id'].'" name="add" value="add" class="btn btn-warning  text-white">關注</a><p>';
+
                         }
                     }
         echo           '</div>';

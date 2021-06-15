@@ -26,17 +26,18 @@ include 'includes/header_menu.php';
                 <div class=" col-md-6  my-5 table-responsive p-5">
                     <table class="table table-striped table-bordered table-hover ">
                     <?php
-$sum = 0;
-$user_id = $_SESSION['user_id'];
-$query = " SELECT products.price AS Price, products.id, products.name AS Name FROM users_products JOIN products ON users_products.item_id = products.id WHERE users_products.user_id='$user_id' and status='Added To Cart'";
+
+$user_id = $_SESSION['user_id'];    
+$query = " SELECT my_img.change_name AS Price, my_img.id, my_img.name AS Name FROM users_products JOIN my_img ON users_products.item_id = my_img.id WHERE users_products.user_id='$user_id' and status='Added To Cart'";
 $result = mysqli_query($con, $query);
 if (mysqli_num_rows($result) >= 1) {
     ?>
                         <thead>
                             <tr>
-                                <th>Item Number</th>
-                                <th>Item Name</th>
-                                <th>Price</th>
+                                <th>商品編號</th>
+                                <th>商品名稱</th>
+                                <th>欲交換商品</th>
+                                <th>觀看商品內容</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -44,12 +45,10 @@ if (mysqli_num_rows($result) >= 1) {
                         <tbody>
                                 <?php
 while ($row = mysqli_fetch_array($result)) {
-        $sum += $row["Price"];
         $id = $row["id"] . ", ";
-        echo "<tr><td>" . "#" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>Rs " . $row["Price"] . "</td><td><a href='cart-remove.php?id={$row['id']}' class='remove_item_link'> Remove</a></td></tr>";
+        echo "<tr><td>" . "#" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td> " . $row["Price"] . "</td><td><a href='product_details.php?id={$row['id']}' class='product_details'>商品內容</a></td><td><a href='cart-remove.php?id={$row['id']}' class='remove_item_link'> Remove</a></td></tr>";
     }
     $id = rtrim($id, ", ");
-    echo "<tr><td></td><td>Total</td><td>Rs " . $sum . "</td><td><a href='success.php' class='btn btn-primary'>Confirm Order</a></td></tr>";
     ?>
                             </tbody>
                             <?php
