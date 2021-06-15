@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-06-15 15:43:23
+-- 產生時間： 2021-06-15 16:51:55
 -- 伺服器版本： 10.4.19-MariaDB
 -- PHP 版本： 8.0.7
 
@@ -30,16 +30,30 @@ SET time_zone = "+00:00";
 CREATE TABLE `chat` (
   `chatID` int(10) NOT NULL,
   `chatText` text NOT NULL,
-  `email_id` varchar(255) NOT NULL
+  `email_id` varchar(255) NOT NULL,
+  `goods_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 傾印資料表的資料 `chat`
 --
 
-INSERT INTO `chat` (`chatID`, `chatText`, `email_id`) VALUES
-(4, 'TEST', ''),
-(5, 'TEST', '');
+INSERT INTO `chat` (`chatID`, `chatText`, `email_id`, `goods_id`) VALUES
+(14, 'test5', 'test@gmail.com', 1),
+(15, '這雙鞋不錯喔', 'test@gmail.com', 2),
+(16, '耳機不錯看喔', 'test@gmail.com', 1),
+(17, '賣多少啊', 'test@gmail.com', 1),
+(18, '帥氣', 'test2@gmail.com', 1),
+(19, 'good', 'test2@gmail.com', 1),
+(20, 'good', 'test2@gmail.com', 1),
+(21, 'good', 'test2@gmail.com', 1),
+(22, 'good', 'test2@gmail.com', 1),
+(23, 'good', 'test2@gmail.com', 1),
+(24, 'good', 'test2@gmail.com', 1),
+(25, 'good', 'test2@gmail.com', 1),
+(26, 'good', 'test2@gmail.com', 1),
+(27, 'good', 'test2@gmail.com', 1),
+(28, 'good', 'test2@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -125,7 +139,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email_id`, `first_name`, `last_name`, `phone`, `registration_time`, `password`) VALUES
 (67, '', 'Sham', 'das', 0, '2021-06-02 09:26:05', 'e10adc3949ba59abbe56e057f20f883e'),
 (68, '123@123', 'd', 'dd', 0, '2021-06-02 14:19:43', '202cb962ac59075b964b07152d234b70'),
-(69, '', '', '', 0, '2021-06-05 09:56:08', 'd41d8cd98f00b204e9800998ecf8427e');
+(69, '', '', '', 0, '2021-06-05 09:56:08', 'd41d8cd98f00b204e9800998ecf8427e'),
+(70, 'test@gmail.com', '123', '123', 0, '2021-06-15 14:18:59', '202cb962ac59075b964b07152d234b70'),
+(71, 'test2@gmail.com', '123', '132', 0, '2021-06-15 14:29:57', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -158,7 +174,8 @@ INSERT INTO `users_products` (`id`, `user_id`, `item_id`, `status`) VALUES
 (31, 70, 0, 'Added To Cart'),
 (32, 70, 8, 'Added To Cart'),
 (33, 70, 1, 'Added To Cart'),
-(35, 70, 3, 'Added To Cart');
+(35, 70, 3, 'Added To Cart'),
+(36, 70, 2, 'Added To Cart');
 
 --
 -- 已傾印資料表的索引
@@ -204,7 +221,7 @@ ALTER TABLE `users_products`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `chatID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `chatID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `my_img`
@@ -222,13 +239,13 @@ ALTER TABLE `products`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users_products`
 --
 ALTER TABLE `users_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

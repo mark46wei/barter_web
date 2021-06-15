@@ -113,7 +113,9 @@ $conn = new PDO($dsn, $username, $password);
 
 $result =$conn->query('select * from chat');
 
-foreach($result as  $row){      
+foreach($result as  $row){     
+    
+    if($row["goods_id"] == $_GET['id']){
         echo    '<div>';
         echo        '<div class="chat">';
         echo            '<div class="container">';
@@ -128,15 +130,18 @@ foreach($result as  $row){
         echo            '</div>';
         echo        '</div>';
         echo    '</div>';
-    
+    }
 }
+
 $conn = null ;
 ?>   
+  
     <div class="container">
     <form action="chatDB.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="comment">留言:</label>
         <textarea type ="text" class="form-control" rows="5" id="comment" name="chatText"></textarea>
+        <input type="hidden" name="items_id" value= "<?php echo $_GET['id'] ; ?>">
       </div>
       <input type="submit" name="submit" value="送出" class="btn btn-primary"></input>
     </form>
