@@ -146,7 +146,25 @@ $('#login').modal('show');
 });
 </script>";
     echo "<script type='text/javascript'>alert('" . $z . "')</script>";}?>
+<?php
+include("./php/dbCon.php");
+$sql="SELECT * FROM classicBookShare WHERE count=12";
+$result = $conn->query($sql);
+$conn->close();
 
+ //查詢結果
+ if ($result->num_rows > 0) {
+  while($row = $result->fetch_assoc()) {
+   $img=$row["bookImage"];
+   $logodata = $img;
+   echo '<img src="data:'.$row['imgType'].';base64,' . $logodata . '" />';
+  }
+ }
+ else{
+
+ }
+ echo $img;
+?>
 
 
 
