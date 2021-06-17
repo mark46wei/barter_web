@@ -37,6 +37,10 @@ include 'includes/check-if-added.php';
     <div class="text-center pt-4 h3">
         推薦商品
     </div>
+    
+    
+    
+    
     <div class="container pt-3">
     
             <div>
@@ -119,6 +123,8 @@ include 'includes/check-if-added.php';
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.tcycle.js"></script>
 <script>
 $(document).ready(function(){
   $('[data-toggle="popover"]').popover();
@@ -131,6 +137,7 @@ if(window.location.href.indexOf('#login') != -1) {
 
 });
 </script>
+
 <?php if (isset($_GET['error'])) {$z = $_GET['error'];
     echo "<script type='text/javascript'>
 $(document).ready(function(){
@@ -146,26 +153,25 @@ $('#login').modal('show');
 });
 </script>";
     echo "<script type='text/javascript'>alert('" . $z . "')</script>";}?>
+
 <?php
-include("./php/dbCon.php");
-$sql="SELECT * FROM classicBookShare WHERE count=12";
-$result = $conn->query($sql);
-$conn->close();
 
- //查詢結果
- if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()) {
-   $img=$row["bookImage"];
-   $logodata = $img;
-   echo '<img src="data:'.$row['imgType'].';base64,' . $logodata . '" />';
-  }
- }
- else{
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ecommerce";
 
- }
- echo $img;
+$dsn = 'mysql:dbname=ecommerce;host=localhost';
+// create connect 
+$conn = new PDO($dsn, $username, $password);
+// Check connection
+
+$result =$conn->query('select * from my_img');
+
+foreach($result as $row){
+echo     '<div class="col-md-3 col-6 py-2">';  
+echo            '<img src="img_display.php?id='.$row["id"].' alt="" class="img-fluid pb-1">';
+};
 ?>
-
-
 
 </html>
