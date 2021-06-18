@@ -122,8 +122,8 @@ foreach($result as  $row){
         echo                '<table class="table">';
         echo                    '<tbody>';
         echo                        '<tr>';
-        echo                            "<td width:25%>{$row["email_id"]}</td>";
-        echo                            "<td width:75%>{$row["chatText"]}</td>";
+        echo                            "<td>{$row["email_id"]}</td>";
+        echo                            "<td>{$row["chatText"]}</td>";
         echo                        '</tr>';
         echo                    '</tbody>';
         echo                '</table>';
